@@ -3,13 +3,14 @@ package org.usfirst.frc.team4817.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.RobotDrive;
-//import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-
-//import org.usfirst.frc.team4817.robot.commands.AutonomousDrive;
+import org.usfirst.frc.team4817.robot.commands.AutonomousDrive;
+import org.usfirst.frc.team4817.robot.subsystems.Climber;
 import org.usfirst.frc.team4817.robot.subsystems.Drive;
 import org.usfirst.frc.team4817.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team4817.robot.subsystems.Hopper;
 import org.usfirst.frc.team4817.robot.subsystems.Shooter;
 
 /**
@@ -28,9 +29,11 @@ public class Robot extends IterativeRobot {
 	
 	RobotDrive driveBase;
 	public static final Shooter shooter = new Shooter();
+	public static final Climber climber= new Climber();
 	public static final Drive drive = new Drive();
+	public static final Hopper hopper = new Hopper();
 
-//	Command autonomousCommand;
+	Command autonomousCommand;
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -38,7 +41,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-	//	autonomousCommand= new AutonomousDrive();
+	    autonomousCommand= new AutonomousDrive('r');
 		oi= new OI(); 
 	}
 
@@ -81,8 +84,9 @@ public class Robot extends IterativeRobot {
 		 */
 
 		// schedule the autonomous command (example)
-		//if (autonomousCommand != null)
-			//autonomousCommand.start();
+		if (autonomousCommand != null) {
+			autonomousCommand.start();
+		}
 	}
 
 	/**
@@ -99,7 +103,7 @@ public class Robot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
-  //      if (autonomousCommand != null) autonomousCommand.cancel();
+        if (autonomousCommand != null) autonomousCommand.cancel();
 		System.out.println("Teleop Init!");
 	}
 

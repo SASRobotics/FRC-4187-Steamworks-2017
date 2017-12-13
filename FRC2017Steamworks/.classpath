@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="C:/Users/admin/Desktop/FRC-4187-Steamworks-2017/FRC2017Steamworks/build/jars/NetworkTables.jar"/>
 	<classpathentry kind="var" path="wpilib" sourcepath="wpilib.sources"/>
 	<classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
+	<classpathentry kind="var" path="USERLIBS_DIR/CTRLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

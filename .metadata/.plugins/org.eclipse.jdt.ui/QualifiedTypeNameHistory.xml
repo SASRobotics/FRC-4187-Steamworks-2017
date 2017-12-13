@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.commands.AutonomousDrive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Relay"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.subsystems.Shooter"/>
@@ -11,9 +10,13 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Relay.Value"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.subsystems.Drive"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Talon"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.RobotMap"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.commands.JoystickDrive"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.Robot"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Spark"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.RobotMap"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.subsystems.Climber"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team4817.robot.commands.ClimberCommand"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 </qualifiedTypeNameHistroy>

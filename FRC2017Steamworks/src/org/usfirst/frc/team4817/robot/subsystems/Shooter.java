@@ -19,12 +19,12 @@ public class Shooter extends Subsystem {
 	
 	public void shooterForward() {
 //		shooter.set(Relay.Value.kOn);					
-		shooter.set(0.5);		
+		shooter.set(100);		
 	}
 	
 	public void shooterBackward() {
 //		shooter.set(Relay.Value.kOn);
-		shooter.set(-0.5);
+		shooter.set(-100);
 	}
 	
 	public void shooterOff() {

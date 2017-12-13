@@ -1,34 +1,21 @@
 package org.usfirst.frc.team4817.robot.subsystems;
 
-
 import org.usfirst.frc.team4817.robot.RobotMap;
 import org.usfirst.frc.team4817.robot.commands.JoystickDrive;
 
 import edu.wpi.first.wpilibj.RobotDrive; 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.Spark;
-//import edu.wpi.first.wpilibj.SpeedController;
-import edu.wpi.first.wpilibj.Talon;
-
 
 public class Drive extends Subsystem {
 	RobotDrive drive;
 	
-	Talon leftMotor;
-	//SpeedController rightMotor;
-	Spark rightMotor; 
-	
 	public Drive(){
 		super("Drive");
-		
-		leftMotor = new Talon(RobotMap.driveLeftMotor);
-		rightMotor = new Spark(RobotMap.driveRightMotor);
-	//	drive = new RobotDrive(leftMotor, rightMotor);
+		drive = new RobotDrive(RobotMap.driveLeftMotor, RobotMap.driveRightMotor);
 	}
 	
 	public void tankDrive(double left, double right){
-		drive.tankDrive(left,right);
-	//	drive= new RobotDrive(left, right);   
+		drive.tankDrive((left),(right));
 	}
 	
 	public void driveStraight(double speed){
@@ -42,4 +29,3 @@ public class Drive extends Subsystem {
     }
 
 }
-
