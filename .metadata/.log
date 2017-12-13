@@ -12814,3 +12814,24 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2017-12-13 11:43:44.322
 !MESSAGE Updating projects
+
+!ENTRY org.eclipse.egit.core 4 0 2017-12-13 11:51:48.172
+!MESSAGE An exception occurred during push on URI https://github.com/snavjivan/FRC-4187-Steamworks-2017.git: https://github.com/snavjivan/FRC-4187-Steamworks-2017.git: cannot open git-receive-pack
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/snavjivan/FRC-4187-Steamworks-2017.git: cannot open git-receive-pack
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:164)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/snavjivan/FRC-4187-Steamworks-2017.git: cannot open git-receive-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:518)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:387)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1200)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:157)
+	... 4 more
+Caused by: java.net.ConnectException: Connection time out: github.com
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:180)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:469)
+	... 8 more
